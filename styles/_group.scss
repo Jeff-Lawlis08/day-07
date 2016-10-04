@@ -3,16 +3,29 @@
   text-align: center;
   width: 60%;
   margin: 0 auto;
+  position: relative;
 
+  &::after {
+    content: '';
+    width: 15%;
+    border: 2px solid $color-primary;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 7.5rem;
+    right: 42.5%;
+  }
   .group-icon {
     font-size: 60px;
     padding-bottom: 1rem;
     width: 100%;
+
+
   }
-  span {
-    padding-top: .7rem;
-    border-top: 2px solid $color-primary;
-  }
+
+
+
   .invisible {
     display: none;
   }
@@ -26,16 +39,27 @@
   color: white;
   position: relative;
 
-  span {
-    border-bottom: 2px solid white;
-  }
-  .invisible  {
+  &::after {
+    content: '';
+    width: 15%;
+    border: 2px solid white;
+    display: block;
     position: absolute;
-    display:block;
-    border: none;
-    right: 7.5rem;
+    top: 9rem;
+    right: 42.5%;
   }
 
+  span {
+    position: relative;
+    top: -.5rem;
+
+  }
+  .invisible {
+    display: inline;
+    position: absolute;
+    top: 10rem;
+    right: 47%;
+  }
 
 
 }

@@ -32,14 +32,22 @@ main {
   padding: 3rem 0;
   text-align: center;
   width: 60%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
+  .group::after {
+    content: '';
+    width: 15%;
+    border: 2px solid #47A3DA;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 7.5rem;
+    right: 42.5%; }
   .group .group-icon {
     font-size: 60px;
     padding-bottom: 1rem;
     width: 100%; }
-  .group span {
-    padding-top: .7rem;
-    border-top: 2px solid #47A3DA; }
   .group .invisible {
     display: none; }
 
@@ -47,13 +55,22 @@ main {
   background-color: #47A3DA;
   color: white;
   position: relative; }
-  .group:hover span {
-    border-bottom: 2px solid white; }
-  .group:hover .invisible {
-    position: absolute;
+  .group:hover::after {
+    content: '';
+    width: 15%;
+    border: 2px solid white;
     display: block;
-    border: none;
-    right: 7.5rem; }
+    position: absolute;
+    top: 9rem;
+    right: 42.5%; }
+  .group:hover span {
+    position: relative;
+    top: -.5rem; }
+  .group:hover .invisible {
+    display: inline;
+    position: absolute;
+    top: 10rem;
+    right: 47%; }
 
 @media (min-width: 670px) {
   .group {
