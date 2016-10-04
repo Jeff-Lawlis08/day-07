@@ -1,0 +1,25 @@
+body {
+  font-size: 62.5%;
+  color: #47A3DA;
+  padding: 2rem 2.5rem;
+  text-align: center; }
+
+main {
+  padding-top: 3rem; }
+
+.site-header {
+  width: 100%; }
+  .site-header ul {
+    padding-left: 0; }
+  .site-header li {
+    display: inline-block;
+    border: 2px solid #47A3DA;
+    border-radius: 50%; }
+
+.group {
+  padding: 3rem;
+  text-align: center; }
+  .group .group-icon {
+    font-size: 50px; }
+
+/*# sourceMappingURL=main.css.map */
