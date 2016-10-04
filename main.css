@@ -40,13 +40,20 @@ main {
   .group span {
     padding-top: .7rem;
     border-top: 2px solid #47A3DA; }
+  .group .invisible {
+    display: none; }
 
 .group:hover {
   background-color: #47A3DA;
-  color: white; }
+  color: white;
+  position: relative; }
   .group:hover span {
-    border-bottom: 2px solid white;
-    padding: 0 0 .7rem 0; }
+    border-bottom: 2px solid white; }
+  .group:hover .invisible {
+    position: absolute;
+    display: block;
+    border: none;
+    right: 7.5rem; }
 
 @media (min-width: 670px) {
   .group {
@@ -65,5 +72,20 @@ main {
     content: '';
     display: block;
     clear: both; } }
+@media (min-width: 880px) {
+  .group {
+    width: calc(33% - 1px);
+    float: left;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray; }
+
+  .group:nth-child(1n+1) {
+    border-right: 1px solid gray; }
+
+  .group:nth-child(3n+3) {
+    border-right: none; }
+
+  .group:nth-child(1n+4) {
+    border-bottom: none; } }
 
 /*# sourceMappingURL=main.css.map */
