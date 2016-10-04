@@ -16,10 +16,54 @@ main {
     border: 2px solid #47A3DA;
     border-radius: 50%; }
 
+@media (min-width: 880px) {
+  header {
+    text-align: left; }
+    header h2 {
+      display: inline-block; }
+    header nav {
+      float: right; }
+
+  header::after {
+    content: '';
+    display: block;
+    clear: both; } }
 .group {
-  padding: 3rem;
-  text-align: center; }
+  padding: 3rem 0;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto; }
   .group .group-icon {
-    font-size: 50px; }
+    font-size: 60px;
+    padding-bottom: 1rem;
+    width: 100%; }
+  .group span {
+    padding-top: .7rem;
+    border-top: 2px solid #47A3DA; }
+
+.group:hover {
+  background-color: #47A3DA;
+  color: white; }
+  .group:hover span {
+    border-bottom: 2px solid white;
+    padding: 0 0 .7rem 0; }
+
+@media (min-width: 670px) {
+  .group {
+    width: calc(50% - 1px);
+    float: left;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray; }
+
+  .group:nth-child(2n+2) {
+    border-right: none; }
+
+  .group:nth-child(1n+5) {
+    border-bottom: none; }
+
+  main::after {
+    content: '';
+    display: block;
+    clear: both; } }
 
 /*# sourceMappingURL=main.css.map */

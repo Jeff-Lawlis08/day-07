@@ -9,3 +9,22 @@ ul {
     border-radius: 50%;
   }
 }
+@media(min-width: 880px) {
+  header {
+    text-align: left;
+
+    h2 {
+
+      display: inline-block;
+    }
+
+    nav {
+      float:right;
+    }
+}
+  header::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

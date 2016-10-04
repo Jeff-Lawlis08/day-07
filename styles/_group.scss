@@ -1,8 +1,52 @@
 .group {
-  padding: 3rem;
+  padding: 3rem 0;
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
 
   .group-icon {
-    font-size: 50px;
+    font-size: 60px;
+    padding-bottom: 1rem;
+    width: 100%;
   }
+  span {
+    padding-top: .7rem;
+    border-top: 2px solid $color-primary;
+  }
+  // .group-icon::after {
+  //   content:'';
+  //   border: 1px solid $color-primary;
+  // }
+}
+.group:hover {
+  background-color: $color-primary;
+  color: white;
+
+  span {
+    border-bottom: 2px solid white;
+    padding: 0 0 .7rem 0;
+  }
+
+}
+@media(min-width: 670px) {
+.group {
+  width: calc(50% - 1px);
+  float: left;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+  .group:nth-child(2n+2){
+  border-right: none;
+
+}
+.group:nth-child(1n+5) {
+  border-bottom: none;
+}
+
+main::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 }
